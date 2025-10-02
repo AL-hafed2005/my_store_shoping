@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سبورت شوب للملابس الرياضية العراقية</title>
+    <title>سبورت-شوب العراق</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -346,7 +346,7 @@
                 </button>
             </div>
             <div class="flex flex-col sm:flex-row justify-between items-center border-t pt-6">
-                <span class="text-lg md:text-xl font-bold text-gray-800 mb-4 sm:mb-0">المجموع: <span id="cart-total">0.00</span> ر.س</span>
+                <span class="text-lg md:text-xl font-bold text-gray-800 mb-4 sm:mb-0">المجموع: <span id="cart-total">0.00</span>د.ع</span>
                 <button onclick="checkout()" id="checkout-btn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:opacity-90 disabled:opacity-50 transition w-full sm:w-auto">
                     تأكيد الطلب
                 </button>
@@ -473,7 +473,7 @@
                              onerror="this.src='https://placehold.co/60x60?text=لا+صورة'">
                         <div class="mr-3 flex-1">
                             <h4 class="font-bold text-gray-800 text-sm md:text-base">${item.name}</h4>
-                            <p class="text-xs text-gray-600 mt-1">${item.price.toFixed(2)} ر.س</p>
+                            <p class="text-xs text-gray-600 mt-1">${item.price.toFixed(2)}د.ع</p>
                             <div class="flex items-center mt-2">
                                 <button onclick="updateQuantity('${item.id}', -1)" class="quantity-btn">
                                     <i class="fas fa-minus"></i>
@@ -725,7 +725,7 @@
                     <h3 class="font-bold text-gray-800 mb-1 text-base">${product.name || 'بدون اسم'}</h3>
                     <p class="text-gray-600 text-xs mb-2">${product.category || 'غير مصنف'}</p>
                     <div class="flex justify-between items-center mb-3">
-                        <span class="font-bold text-blue-600 text-lg">${(product.price || 0).toFixed(2)} ر.س</span>
+                        <span class="font-bold text-blue-600 text-lg">${(product.price || 0).toFixed(2)}د.ع </span>
                         <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">${product.inStock ? 'متوفر' : 'غير متوفر'}</span>
                     </div>
                     <button onclick='event.stopPropagation(); addToCart(${JSON.stringify({id: product.id, name: product.name || 'منتج', price: product.price || 0, image: imgSrc}).replace(/'/g, "\\'")})' 
@@ -804,7 +804,7 @@
                                 <span class="text-gray-600 mr-2">(4.5)</span>
                             </div>
                         </div>
-                        <div class="text-3xl font-bold text-blue-600 mb-4">${product.price.toFixed(2)} ر.س</div>
+                        <div class="text-3xl font-bold text-blue-600 mb-4">${product.price.toFixed(2)}د.ع </div>
                         <div class="mb-6">
                             <h3 class="font-bold text-gray-800 mb-2">المواصفات:</h3>
                             <ul class="feature-list">
@@ -916,5 +916,4 @@
         };
     </script>
 </body>
-
 </html>
